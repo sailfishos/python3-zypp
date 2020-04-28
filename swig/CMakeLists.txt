@@ -12,7 +12,7 @@ SET( SWIG_INPUT "${CMAKE_CURRENT_SOURCE_DIR}/zypp.i" )
 #
 
 OPTION(BUILD_RUBY_BINDINGS "Build Ruby bindings" ON)
-OPTION(BUILD_PYTHON2_BINDINGS "Build Python 2 bindings" ON)
+OPTION(BUILD_PYTHON_BINDINGS "Build Python bindings" ON)
 OPTION(BUILD_PERL5_BINDINGS "Build Perl 5 bindings" ON)
 
 #
@@ -26,10 +26,10 @@ IF(BUILD_RUBY_BINDINGS)
   ENDIF()
 ENDIF()
 
-IF(BUILD_PYTHON2_BINDINGS)
-  # Enforce Python 2.7, libzypp-bindings does not yet work with Python3
-  set(PythonLibs_FIND_VERSION 2.7)
-  set(PythonLibs_FIND_VERSION_MAJOR 2)
+IF(BUILD_PYTHON_BINDINGS)
+  # Enforce Python 3.8
+  set(PythonLibs_FIND_VERSION 3.8)
+  set(PythonLibs_FIND_VERSION_MAJOR 3)
   FIND_PACKAGE(PythonLibs)
   IF(PYTHON_LIBRARY)
     ADD_SUBDIRECTORY(python)
