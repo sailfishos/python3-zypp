@@ -17,10 +17,10 @@ class TestSequenceFunctions(unittest.TestCase):
     installed_pkgs = Z.pool()
     for item in installed_pkgs:
         if zypp.isKindPackage(item):
-            print "Repopath %s" % item.repoInfo().packagesPath()
+            print("Repopath %s" % item.repoInfo().packagesPath())
             item = zypp.asKindPackage(item)
-            print "Location filename %s" % item.location().filename()
-            print "%s.%s %s:%d" % (item.name(), item.arch(), item.edition(), item.installSize())
+            print("Location filename %s" % item.location().filename())
+            print("%s.%s %s:%d" % (item.name(), item.arch(), item.edition(), item.installSize()))
 
 
 if __name__ == '__main__':

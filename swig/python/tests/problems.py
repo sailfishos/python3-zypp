@@ -14,7 +14,7 @@ class TestSequenceFunctions(unittest.TestCase):
     assert Z
     if not Z.resolver().resolvePool():
         for problem in Z.resolver().problems():
-            print "Problem %s" % problem.description()
+            print("Problem %s" % problem.description())
 #            raise "Solver Error"
 
 if __name__ == '__main__':
