@@ -1,4 +1,6 @@
 
+%include <zypp/ResObject.h>
+
 /** Base of ResTraits. Defines the Resolvable::Kind type. */
 /*struct ResolvableTraits
 {

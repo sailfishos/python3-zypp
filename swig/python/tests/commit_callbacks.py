@@ -77,7 +77,7 @@ class CommitReceiver:
     # testing: increment the number of removals and print the resolvable
     global removals
     removals += 1
-    print "Starting to remove ", resolvable
+    print("Starting to remove ", resolvable)
 
   #
   # removal_progress() is called during a resolvable (typically package) uninstall
@@ -86,7 +86,7 @@ class CommitReceiver:
   #    
   def removal_progress(self, resolvable, percentage):
     assert percentage == 42
-    print "Remove of ", resolvable, " at ", percentage, "%"
+    print("Remove of ", resolvable, " at ", percentage, "%")
     return True
 
   #
@@ -99,7 +99,7 @@ class CommitReceiver:
   # - "invalid":   any other error
   #    
   def removal_finish(self, resolvable, status, detail):
-    print "Remove of ", resolvable.name(), " finished with problem ", status, ": ", detail
+    print("Remove of ", resolvable.name(), " finished with problem ", status, ": ", detail)
 
   #
   # report a problem during resolvable removal
@@ -108,7 +108,7 @@ class CommitReceiver:
   # Must return "abort", "retry" or "ignore"
   #
   def removal_problem(self, resolvable, error, description):
-    print "Remove of ", resolvable.name(), " has problem ", error, ": ", description
+    print("Remove of ", resolvable.name(), " has problem ", error, ": ", description)
     return "ignore"
 
   ################################
@@ -122,7 +122,7 @@ class CommitReceiver:
     # testing: increment the number of removals and print the resolvable
     global installs
     installs += 1
-    print "Starting to install ", resolvable
+    print("Starting to install ", resolvable)
 
   #
   # install_progress() is called during a resolvable (typically package) install
@@ -131,7 +131,7 @@ class CommitReceiver:
   #    
   def install_progress(self, resolvable, percentage):
     assert percentage == 42
-    print "Install of ", resolvable, " at ", percentage, "%"
+    print("Install of ", resolvable, " at ", percentage, "%")
     return True
 
   #
@@ -144,7 +144,7 @@ class CommitReceiver:
   # - "invalid":   any other error
   #    
   def install_finish(self, resolvable, status, detail):
-    print "Install of ", resolvable.name(), " finished with problem ", status, ": ", detail
+    print("Install of ", resolvable.name(), " finished with problem ", status, ": ", detail)
 
   #
   # report a problem during resolvable install
@@ -153,7 +153,7 @@ class CommitReceiver:
   # Must return "abort", "retry" or "ignore"
   #
   def install_problem(self, resolvable, error, description):
-    print "Install of ", resolvable.name(), " has problem ", error, ": ", description
+    print("Install of ", resolvable.name(), " has problem ", error, ": ", description)
     return "ignore"
 
 #
@@ -232,7 +232,7 @@ class CommitCallbacksTestCase(unittest.TestCase):
         # Loop over pool - just to get real instances of Resolvable
         #
         for item in self.Z.pool():
-            print "Emitting removal of ", item.resolvable()
+            print("Emitting removal of ", item.resolvable())
             #
             # Use the zypp.CommitCallbacksEmitter to fake an actual package removal
             #
@@ -254,7 +254,7 @@ class CommitCallbacksTestCase(unittest.TestCase):
         # Loop over pool - just to get real instances of Resolvable
         #
         for item in self.Z.pool():
-            print "Emitting install of ", item.resolvable()
+            print("Emitting install of ", item.resolvable())
             #
             # Use the zypp.CommitCallbacksEmitter to fake an actual package removal
             #

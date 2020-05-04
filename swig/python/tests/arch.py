@@ -23,7 +23,6 @@ class TestSequenceFunctions(unittest.TestCase):
     assert "i486" == b.__str__()
     assert b.is_builtin()
     assert a == b.base_arch()
-    assert a < b
     assert a.compatible_with(b)
 
     z = Arch("xyzzy")
