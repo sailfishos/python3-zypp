@@ -6,6 +6,8 @@
 %ignore zypp::ResPool::byStatus;
 %ignore zypp::ResPool::byStatusBegin;
 %ignore zypp::ResPool::byStatusEnd;
+%ignore zypp::ResPool::changedPseudoInstalled;
+%ignore zypp::ResPool::establishedStates;
 %apply unsigned { zypp::ResPool::size_type };
 %include <zypp/ResPool.h>
 
