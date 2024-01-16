@@ -9,4 +9,4 @@
 
 %ignore zypp::filesystem::operator<( const Pathname & l, const Pathname & r );
 
-%include <zypp/Pathname.h>
+%include <zypp-core/Pathname.h>

@@ -1,2 +1,2 @@
-%include <zypp/CheckSum.h>
+%include <zypp-core/CheckSum.h>
 
