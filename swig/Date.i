@@ -1,3 +1,3 @@
 
 // TODO: tell make about dependencies
-%include <zypp/Date.h>
+%include <zypp-core/Date.h>

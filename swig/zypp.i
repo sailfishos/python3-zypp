@@ -119,10 +119,10 @@ SWIGINTERNINLINE SV *SWIG_From_double  SWIG_PERL_DECL_ARGS_1(double value);
 
 #include <sstream>
 #undef seed // don't know where it comes from, but it conflicts with <random>
-#include "zypp/base/PtrTypes.h"
-#include "zypp/base/ReferenceCounted.h"
+#include "zypp-core/base/PtrTypes.h"
+#include "zypp-core/base/ReferenceCounted.h"
 #include "zypp/Edition.h"
-#include "zypp/Pathname.h"
+#include "zypp-core/Pathname.h"
 #include "zypp/ResTraits.h"
 #include "zypp/ZYppFactory.h"
 #include "zypp/ZYpp.h"
@@ -132,7 +132,7 @@ SWIGINTERNINLINE SV *SWIG_From_double  SWIG_PERL_DECL_ARGS_1(double value);
 #include "zypp/target/TargetImpl.h"
 #include "zypp/MediaSetAccess.h"
 #include "zypp/ResFilters.h"
-#include "zypp/OnMediaLocation.h"
+#include "zypp-core/onmedialocation.h"
 #include "zypp/Repository.h"
 #include "zypp/ServiceInfo.h"
 #include "zypp/RepoManager.h"
@@ -224,8 +224,8 @@ namespace zypp {
 %import <boost/weak_ptr.hpp>
 %import <boost/intrusive_ptr.hpp>
 #endif
-%import <zypp/base/PtrTypes.h>
-%import <zypp/base/Flags.h>
+%import <zypp-core/base/PtrTypes.h>
+%import <zypp-core/base/Flags.h>
 
 %include "IdStringType.i"
 %include "Pathname.i"
@@ -296,7 +296,7 @@ namespace zypp {
 // helper
 //
 %{
-#include <zypp/base/LogControl.h>
+#include <zypp-core/base/LogControl.h>
 %}
 %inline %{
   namespace zypp

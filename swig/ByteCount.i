@@ -12,7 +12,7 @@ namespace zypp
 
 
 // TODO: tell make about dependencies
-%include <zypp/ByteCount.h>
+%include <zypp-core/ByteCount.h>
 
 
 #ifdef SWIGRUBY

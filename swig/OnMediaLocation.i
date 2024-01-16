@@ -1,2 +1,2 @@
 %ignore zypp::dumOn;
-%include <zypp/OnMediaLocation.h>
+%include <zypp-core/onmedialocation.h>
