@@ -9,6 +9,5 @@
 
 namespace zypp
 {
-  typedef ::std::list<ChangelogEntry> Changelog;
   %template(Changelog) ::std::list<ChangelogEntry>;
 }

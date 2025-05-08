@@ -20,7 +20,6 @@
 }
 namespace zypp
 {
-  typedef ::zypp::intrusive_ptr<KeyRing> KeyRing_Ptr;
   %template(KeyRing_Ptr) ::zypp::intrusive_ptr<KeyRing>;
 }
 
